@@ -199,6 +199,61 @@ Filter Mode = Point(no filter). Когда установлено значени
 
 Написанный скрипт подробно расписан в приложении под заголовком «Код для объекта Player (Птички)».
 
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/PlayerOsn.png}}
+\caption{Блок-схема для класса Player.}
+\end{figure}
+
+Блок-схемы для функций в классе Player:
+\begin{enumerate}
+\item Awake() 
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/PlayerOsnAwake.png}}
+\caption{Блок-схема для функции Awake() в классе Player.}
+\end{figure}
+
+\item Start() 
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/PlayerOsnStart.png}}
+\caption{Блок-схема для функции Start() в классе Player.}
+\end{figure}
+
+\item Update() 
+
+\begin{figure}[H]
+\center{\includegraphics[scale=0.8]{p/PlayerOsnUpdate.png}}
+\caption{Блок-схема для функции Update()  в классе Player.}
+\end{figure}
+
+
+\item AnimateSprite()
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/PlayerOsnAnimateSprite.png}}
+\caption{Блок-схема для функции AnimateSprite() в классе Player.}
+\end{figure}
+
+
+\item OnEnable() 
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/PlayerOsnAnimateOnEnable.png}}
+\caption{Блок-схема для функции OnEnable() в классе Player.}
+\end{figure}
+
+
+\item OnTriggerEnter2D(Collider2D other) 
+
+\begin{figure}[H]
+\center{\includegraphics[scale=0.68]{p/PlayerOsnAnimateOnTriggerEnter2D.png}}
+\caption{Блок-схема для функции OnTriggerEnter2D(Collider2D other) в классе Player.}
+\end{figure}
+
+
+\end{enumerate}
+
 \textbf{Подготовка и программирование заднего фона}
 
 Перед созданием фона нужно отредактировать параметры спрайта Background, поставив в Wrap Mode = Repeat. Данная настройка позволяет повторять текстуру по горизонтали и вертикали вместо того, чтобы отображать ее только один раз. Это пригодится при дальнейшем проектировании.
@@ -218,6 +273,29 @@ Filter Mode = Point(no filter). Когда установлено значени
 
 Написанный скрипт подробно расписан в приложении под заголовком «Код для объекта Back (Задний фон)».
 
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/BackOsn.png}}
+\caption{Блок-схема для класса Back.}
+\end{figure}
+
+Блок-схемы для функций в классе Back:
+\begin{enumerate}
+\item Awake() 
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/BackOsnAwake.png}}
+\caption{Блок-схема для функции Awake() в классе Back.}
+\end{figure}
+
+\item Update()
+
+\begin{figure}[H]
+\center{\includegraphics[scale=0.75]{p/BackOsnUpdate.png}}
+\caption{Блок-схема для функции Update() в классе Back.}
+\end{figure}
+
+\end{enumerate}
+
 \textbf{Подготовка и программирование переднего фона}
 
 Перед созданием фона нужно отредактировать параметры спрайта Ground, поставив в Wrap Mode = Repeat. Данная настройка позволяет повторять текстуру по горизонтали и вертикали вместо того, чтобы отображать ее только один раз. Дополнительно нужен компонент Box Collider 2D, где нужно поставить галочку напротив Is Trigger, что не даст птичке вылетать за карту. Это пригодится при дальнейшем проектировании.
@@ -229,6 +307,28 @@ Filter Mode = Point(no filter). Когда установлено значени
 Чтобы сделать фон более привлекательным, его можно разбить на плитку. В разделе с материалом поставить Tiling = 3, этот параметр отобразит одно изображение три раза.  
 
 Для переднего фона можно оставить скрипт с заднего фона, изменив лишь скорость прокрутки объекта на animationSpeed = 0.75, чтобы создать эффект разного движения фонов. Он подробно расписан в приложении под заголовком «Код для объекта Ground (Задний фон)».
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/GroundOsn.png}}
+\caption{Блок-схема для класса Ground.}
+\end{figure}
+
+Блок-схемы для функций в классе Back:
+\begin{enumerate}
+\item Awake() 
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/GroundOsnAwake.png}}
+\caption{Блок-схема для функции Awake() в классе Ground.}
+\end{figure}
+
+\item Update()
+\begin{figure}[H]
+\center{\includegraphics[scale=0.75]{p/GroundOsnUpdate.png}}
+\caption{Блок-схема для функции Update() в классе Ground.}
+\end{figure}
+
+\end{enumerate}
 
 \textbf{Подготовка и программирование труб}
 
@@ -256,6 +356,36 @@ Filter Mode = Point(no filter). Когда установлено значени
 
 Скрипт подробно расписан в приложении под заголовком «Код для объекта Prefabs (Спавн труб)».
 
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/GroundOsn.png}}
+\caption{Блок-схема для класса Pipe.}
+\end{figure}
+
+Блок-схемы для функций в классе Pipe:
+\begin{enumerate}
+\item OnEnable()
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/PipeOsnOnEnable.png}}
+\caption{Блок-схема для функции  OnEnable() в классе Pipe.}
+\end{figure}
+
+\item Spawn()
+
+\begin{figure}[H]
+\center{\includegraphics[scale=0.75]{p/PipeOsnSpawn.png}}
+\caption{Блок-схема для функции Spawn() в классе Pipe.}
+\end{figure}
+
+\item ResetStartHeight()
+
+\begin{figure}[H]
+\center{\includegraphics[scale=0.75]{p/PipeOsnReset.png}}
+\caption{Блок-схема для функции ResetStartHeight() в классе Pipe.}
+\end{figure}
+
+\end{enumerate}
+
 Также для префаба с трубами нужно создать их движение и уничтожение, если они касаются левого края главного экрана. 
 
 В коде используются методы:
@@ -266,6 +396,29 @@ Filter Mode = Point(no filter). Когда установлено значени
 \end{enumerate} 
 
 Скрипт под названием «PipesD» подробно расписан в приложении под заголовком «Код для префаба Pipes (Движение труб)».
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/PipeDOsn.png}}
+\caption{Блок-схема для класса PipeD.}
+\end{figure}
+
+Блок-схемы для функций в классе PipeD:
+\begin{enumerate}
+\item Start()
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/PipeDOsnStart.png}}
+\caption{Блок-схема для функции  Start() в классе PipeD.}
+\end{figure}
+
+\item Update()
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.0]{p/PipeDOsnUpdate.png}}
+\caption{Блок-схема для функции Update() в классе PipeD.}
+\end{figure}
+
+\end{enumerate}
 
 \textbf{Подготовка и программирование интерфейса}
 
@@ -316,6 +469,99 @@ Reference Resolution x = 1920, y = 1080. Так, когда использует
 
 Скрипт подробно расписан в приложении под заголовком «Управление интерфейсом».
 
+\begin{figure}[H]
+\center{\includegraphics[scale=1.3]{p/GameManagerOsn.png}}
+\caption{Блок-схема для класса GameManager.}
+\end{figure}
+
+Блок-схемы для функций в классе GameManager:
+\begin{enumerate}
+\item ToggleHelpAboutImage()
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/GameManagerOsnToggeHelpAbout.png}}
+\caption{Блок-схема для функции ToggleHelpAboutImage() в классе GameManager.}
+\end{figure}
+
+\item ToggleHelpImage()
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/GameManagerOsnToggeHelpImage.png}}
+\caption{Блок-схема для функции ToggleHelpImage() в классе GameManager.}
+\end{figure}
+
+\item ToggleAboutImage()
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/GameManagerOsnToggeAboutImage.png}}
+\caption{Блок-схема для функции ToggleAboutImage() в классе GameManager.}
+\end{figure}
+
+\item Awake()
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/GameManagerOsnAwake.png}}
+\caption{Блок-схема для функции Awake() в классе GameManager.}
+\end{figure}
+
+\item Start()
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/GameManagerOsnStart.png}}
+\caption{Блок-схема для функции Start() в классе GameManager.}
+\end{figure}
+
+\item PauseButtonPressed()
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/GameManagerOsnPauseButton.png}}
+\caption{Блок-схема для функции PauseButtonPressed() в классе GameManager.}
+\end{figure}
+
+\item ContinueButtonPressed()
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/GameManagerOsnCintinueButton.png}}
+\caption{Блок-схема для функции ContinueButtonPressed() в классе GameManager.}
+\end{figure}
+
+\item Play()
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/GameManagerOsnPlay.png}}
+\caption{Блок-схема для функции Play() в классе GameManager.}
+\end{figure}
+
+\item Pause()
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/GameManagerOsnPause.png}}
+\caption{Блок-схема для функции Pause() в классе GameManager.}
+\end{figure}
+
+\item GameOver()
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/GameManagerOsnGameOver.png}}
+\caption{Блок-схема для функции GameOver() в классе GameManager.}
+\end{figure}
+
+\item IncreaseScore()
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/GameManagerOsnIncreaseScore.png}}
+\caption{Блок-схема для функции IncreaseScore() в классе GameManager.}
+\end{figure}
+
+\item Update()
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/GameManagerOsnUpdate.png}}
+\caption{Блок-схема для функции Update() в классе GameManager.}
+\end{figure}
+
+\end{enumerate}
+
 Также дополнительно были разработаны скрипты «Exit» и «Restart».
 
 «Exit» разработан для кнопки Exit, скрипт реализует выход из игры).
@@ -328,6 +574,21 @@ Reference Resolution x = 1920, y = 1080. Так, когда использует
 
 Скрипт под названием «Exit» подробно расписан в приложении под заголовком «Код для кнопки Exit (выход из игры)».
 
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/ExitOsn.png}}
+\caption{Блок-схема для класса Exit.}
+\end{figure}
+
+Блок-схемы для функций в классе Exit:
+\begin{enumerate}
+\item Quit()
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/ExitOsnQuit.png}}
+\caption{Блок-схема для функции  Quit() в классе Exit.}
+\end{figure}
+
+\end{enumerate}
 
 «Restart» для кнопки Button (скрипт реализует вызов метода ResetStartHeight(), что приводит к сбросу начальной высоты труб в скрипте Pipe) о которой ранее писалось. 
 
@@ -340,6 +601,29 @@ Reference Resolution x = 1920, y = 1080. Так, когда использует
 
 Скрипт под названием «Restart» подробно расписан в приложении под заголовком «Код для кнопки Button (Cброс начальной высоты труб)».
 
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/RestartOsn.png}}
+\caption{Блок-схема для класса Restart.}
+\end{figure}
+
+Блок-схемы для функций в классе Restart:
+\begin{enumerate}
+\item Start()
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/RestartOsnStart.png}}
+\caption{Блок-схема для функции  Start() в классе Restart.}
+\end{figure}
+
+\item ResetStartHeight()
+
+\begin{figure}[H]
+\center{\includegraphics[scale=1.2]{p/RestartOsnRestartStart.png}}
+\caption{Блок-схема для функции  ResetStartHeight() в классе Restart.}
+\end{figure}
+
+\end{enumerate}
 
 
 \chapter*{Заключение}
